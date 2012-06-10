@@ -1,0 +1,29 @@
+#socket_popup{
+  -webkit-box-shadow: 0px 0px 18px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 18px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 18px rgba(50, 50, 50, 0.75);
+  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));
+  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);
+  font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
+
+}
+
+#socket_popup p{
+  color: #555;
+  font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
+}
+
+#socket_popup span.socket_uid{
+  font-size: 16px;
+  -webkit-box-shadow: 0px 0px 1px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 1px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 1px rgba(50, 50, 50, 0.75);
+  padding: 10px;
+  background-color: #FFFFFF;
+}
+
+.socket_popup_close {
+  position: absolute;
+  top:10px;
+  right:10px;
+}
