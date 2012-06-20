@@ -25,7 +25,7 @@
     cssnode.rel = 'stylesheet';
     cssnode.href = url;
 
-    cssnode.onload = script.onreadystagechange = function() {
+    cssnode.onload = cssnode.onreadystagechange = function() {
 			var rs = this.readyState;
 			if ((!rs || rs === 'loaded'|| rs === 'complete')) {
 				if (typeof callback === 'function') {
