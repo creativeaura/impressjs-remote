@@ -134,6 +134,12 @@ h3 {
   border-bottom: 1px solid #eee;
   font-size: 18px;
 }
+#container-form{
+  padding: 20px;
+}
+#container-form h1{
+  font-size:28px;
+}
 #nav_buttons{
 
 }

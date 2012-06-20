@@ -1,13 +1,5 @@
 (function() {
-// var socket_url = 'http://localhost:3000',
-// uid;
-
-// var socket = io.connect(socket_url);
-// socket.on('welcome', function (data) {
-// uid = data.uid;
-// });
-
-
+  
 var createPopup, setStyles, positionPanel, initSocket;
 var socket_url = 'http://impressjs.herokuapp.com/', uid, socketid, IJSRemote = {};
 
