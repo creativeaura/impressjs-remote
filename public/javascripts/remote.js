@@ -9,7 +9,7 @@
 
 
 var createPopup, setStyles, positionPanel, initSocket;
-var socket_url = 'http://localhost:3000/', uid, socketid, IJSRemote = {};
+var socket_url = 'http://impressjs.herokuapp.com/', uid, socketid, IJSRemote = {};
 
 setStyles = function (el, o) {
 	var key;

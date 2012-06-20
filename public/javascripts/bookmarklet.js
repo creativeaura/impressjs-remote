@@ -1,7 +1,7 @@
 (function() {
 
 
-	var injectScript, injectStylesheet, assetsDomain = 'http://localhost:3000/';
+	var injectScript, injectStylesheet, assetsDomain = 'http://impressjs.herokuapp.com/';
 
 	injectScript = function(url, callback) {
 		var script = document.createElement('script');
