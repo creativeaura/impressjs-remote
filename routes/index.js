@@ -4,7 +4,7 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'ImpressJS Remote' });
+  res.render('index', { title: 'ImpressJs' });
 };
 
 exports.session = function(req, res){
