@@ -1,13 +1,14 @@
 {
     "name": "ImpressJS-Remote"
-  , "version": "0.0.1"
+  , "version": "0.0.2"
   , "private": true
   , "dependencies": {
       "express": "2.5.8"
     , "ejs": "~0.7.1"
     , "socket.io": "~0.9.6"
+    , "pubnub": "~3.1.9"
   }
   , "engines": {
-    "node": "0.6.x"
+    "node": "0.8.x"
   }
 }
