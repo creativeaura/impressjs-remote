@@ -51,8 +51,11 @@ io.sockets.on('connection', function(socket) {
 	socket.emit('welcome', {uid: uid, message: 'Welcome to Impress JS Remote', socket_id: socket.id });
   clients[uid] = socket;
   socket.on('command', function(data) {
-    console.log('command received', data);
-    clients[data.key].emit('command', data);
+    try{
+      clients[data.key].emit('command', data);
+    } catch (error) {
+      
+    }
   });
 
 });

@@ -5,7 +5,7 @@
   background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));
   background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);
   font: 13px "Helvetica Neue", "Lucida Grande", "Arial";
-
+  pointer-events: auto;
 }
 
 #socket_popup p{
@@ -20,10 +20,22 @@
   box-shadow:         0px 0px 1px rgba(50, 50, 50, 0.75);
   padding: 10px;
   background-color: #FFFFFF;
+  display: block;
+  width: 100px;
+  margin:10px auto;
 }
 
 .socket_popup_close {
   position: absolute;
   top:10px;
   right:10px;
+}
+
+#x-remote-panel{
+  -webkit-box-shadow: 0px 0px 18px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow:    0px 0px 18px rgba(50, 50, 50, 0.75);
+  box-shadow:         0px 0px 18px rgba(50, 50, 50, 0.75);
+
+  background: #ECE9E9 -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ECE9E9));
+  background: #ECE9E9 -moz-linear-gradient(top, #fff, #ECE9E9);
 }
