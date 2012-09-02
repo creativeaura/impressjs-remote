@@ -2,7 +2,7 @@
 
 	'use strict';
 
-	var injectScript, injectStylesheet, assetsDomain = 'http://impressjs.herokuapp.com/', loadingPanel;
+	var injectScript, injectStylesheet, assetsDomain = 'http://localhost:3000/', loadingPanel;
 
 	loadingPanel = function() {
 		var body = document.getElementsByTagName("body")[0],

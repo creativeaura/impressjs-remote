@@ -1,7 +1,7 @@
 (function() {
   
 var createPopup, setStyles, positionPanel, initSocket;
-var socket_url = 'http://impressjs.herokuapp.com/', uid, socketid, IJSRemote = {}, updateLog;
+var socket_url = 'http://localhost:3000/', uid, socketid, IJSRemote = {}, updateLog;
 
 updateLog = function(log) {
   var p = document.getElementById('x-remote-panel');
@@ -73,7 +73,7 @@ initSocket = function() {
     socketid = data.socket_id;
     console.log('-> socket', socketid);
 		createPopup(uid, socketid);
-    updateLog('Connection established with phone.');
+    updateLog('Connection established with Remote.');
 	});
 
   socket.on('command', function(data) {

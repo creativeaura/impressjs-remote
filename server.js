@@ -2,14 +2,7 @@ var express = require('express');
 
 var app = module.exports = express.createServer(express.logger());
 
-var pubnub = require('pubnub').init({
-  publish_key   : "pub-62fa0fbf-221f-4d4f-a927-88ef9662ae09",
-  subscribe_key : "sub-70ef5775-aaf8-11e1-b1ef-e30f56e7105c",
-  secret_key    : "sec-ZGRlZDFmM2YtYTJhNS00OTVhLWEyN2MtOTkxMGVhODEwM2Fh",
-  ssl           : true,
-  cipher_key    : "AES-Crypto-Cipher-Key",
-  origin        : "pubsub.pubnub.com"
-});
+var io = require('socket.io').listen(app);
 
 var routes = require('./routes');
 
@@ -31,6 +24,11 @@ app.configure(function() {
 });
 
 
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 2);
+});
+
 app.configure('development', function() {
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
@@ -43,13 +41,26 @@ app.get('/', routes.index);
 app.get('/session/:key', routes.session);
 
 app.listen(port, function() {
-  //console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
-  console.log("Express server listening");
+  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
 
-pubnub.subscribe({
-  channel: "impressjs",
-  callback: function(message) {
-    console.log(message);
-  }
+
+io.sockets.on('connection', function(socket) {
+  var uid = utility.getKey(4);
+  console.log('presentation id ', socket.id);
+
+  socket.emit('welcome', {uid: uid, message: 'Welcome to Impress JS Remote', socket_id: socket.id });
+  clients[uid] = socket;
+  socket.on('command', function(data) {
+    try{
+      clients[data.key].emit('command', data);
+    } catch (error) {
+      
+    }
+  });
+
+});
+
+io.sockets.on('disconnect', function(socket) {
+  //console.log('disconnect', socket.id);
 });

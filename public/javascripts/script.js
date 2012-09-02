@@ -1,7 +1,7 @@
 (function($) {
   var enter_button = $('#enter_session'),
     session_id,
-    url = 'http://impressjs.herokuapp.com/',
+    url = '',
     prevBtn = $('#prev_btn'),
     nextBtn = $('#next_btn'),
     socket;
@@ -12,7 +12,7 @@
       if (session_id !== '') {
         location.href = url + 'session/' +  session_id;
       } else {
-        alert('Please enter a valid session id');
+        alert('Please enter a valid session id and try again.');
       }
     });
   }
